@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-int RandomValue();
+int RandomValue(int level);
 
 std::string WhatsYourName();
 

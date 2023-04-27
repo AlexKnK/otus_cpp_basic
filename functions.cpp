@@ -5,11 +5,11 @@
 #include <ctime>
 
 
-int RandomValue() {
+int RandomValue(int level) {
 
 	std::srand(std::time(NULL));
 
-	int random_value = std::rand() % 100;
+	int random_value = std::rand() % level;
 	
 	return random_value;
 }
@@ -18,7 +18,7 @@ std::string WhatsYourName() {
 
 	std::string a;
 	std::cout << "Greatings, stranger. Tell me your name " << std::endl;
-	std::cin >> a;
+	std::getline(std::cin, a);
 
 	return a;
 }
@@ -71,7 +71,7 @@ int ReadFromFile(std::string name) {
 	}
 	else
 	{
-		std::cout << "Error\n\n" << std::endl;
+		std::cout << "Error, file not found!\n\n" << std::endl;
 		return -1;
 	}
 
